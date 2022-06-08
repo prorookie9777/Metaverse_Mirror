@@ -4,13 +4,15 @@ using UnityEngine;
 using Mirror;
 public class mainPlayer : NetworkBehaviour
 {
+    
     CharacterController characterController;
     Vector3 moveDirecion;
     private Vector3 moveDirection = Vector3.zero;
     public bool isJump;
     public float Horizontal, Vertical;
     public float speed;
-
+    [SyncVar]
+    public int Health;
     void Awake()
     {
         QualitySettings.vSyncCount = 0;
@@ -18,6 +20,7 @@ public class mainPlayer : NetworkBehaviour
     }
     void Start()
     {
+        Health = 100;
         characterController = GetComponent<CharacterController>();
         speed = 3.0f;
     }
@@ -25,11 +28,17 @@ public class mainPlayer : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isLocalPlayer)
+         if (isLocalPlayer)
         {
             move();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                this.Health -= 5;
+            }
         }
        
+        
+        
     }
     public void move()
     {
@@ -51,4 +60,5 @@ public class mainPlayer : NetworkBehaviour
             
         }
     }
+     
 }
