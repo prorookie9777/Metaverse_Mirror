@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
-public class mainPlayer : NetworkBehaviour
+//using Mirror;
+public class mainPlayer : MonoBehaviour
 {
     
     CharacterController characterController;
@@ -11,7 +11,7 @@ public class mainPlayer : NetworkBehaviour
     public bool isJump;
     public float Horizontal, Vertical;
     public float speed;
-    [SyncVar]
+   /* [SyncVar]*/
     public int Health;
     void Awake()
     {
@@ -28,7 +28,7 @@ public class mainPlayer : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (isLocalPlayer)
+        /* if (isLocalPlayer)*/
         {
             move();
             if (Input.GetKeyDown(KeyCode.Mouse0))
