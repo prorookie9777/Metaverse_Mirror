@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using Mirror;
-public class mainPlayer : MonoBehaviour
+ using Mirror;
+public class mainPlayer : NetworkBehaviour
 {
     
     CharacterController characterController;
@@ -28,7 +28,7 @@ public class mainPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if (isLocalPlayer)*/
+        if (isLocalPlayer) 
         {
             move();
             if (Input.GetKeyDown(KeyCode.Mouse0))
