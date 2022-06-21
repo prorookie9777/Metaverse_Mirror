@@ -123,6 +123,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &58317748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2322073894220950197, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
+  m_PrefabInstance: {fileID: 2322073894340090860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &58317753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58317748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 7777
+  NoDelay: 1
+  SendTimeout: 5000
+  ReceiveTimeout: 30000
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  serverSendQueueLimitPerConnection: 10000
+  serverReceiveQueueLimitPerConnection: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
+  clientSendQueueLimit: 10000
+  clientReceiveQueueLimit: 10000
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +522,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2322073894220950198, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322073894220950199, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
+      propertyPath: transport
+      value: 
+      objectReference: {fileID: 58317753}
+    - target: {fileID: 2322073894220950199, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
+      propertyPath: networkAddress
+      value: ec2-52-207-255-59.compute-1.amazonaws.com
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2322073894220950198, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
 --- !u!1001 &7958609614622050688
 PrefabInstance:
