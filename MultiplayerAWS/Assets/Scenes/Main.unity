@@ -1058,17 +1058,18 @@ PrefabInstance:
       propertyPath: networkAddress
       value: localhost
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2322073894220950198, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
 --- !u!114 &2322073894340090861 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2322073894220950198, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5589253117823364762, guid: c862de6b3912ae84a9c3778b5542367f, type: 3}
   m_PrefabInstance: {fileID: 2322073894340090860}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7958609614622050688
